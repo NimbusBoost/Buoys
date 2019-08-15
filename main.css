@@ -1,0 +1,106 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	margin: 0;
+	background: #F9F4F5;
+}
+
+.header {
+	padding: 80px;
+	text-align: center;
+	background-image: url(https://mediad.publicbroadcasting.net/p/wbfo2/files/styles/x_large/public/201609/buoy_2__irene_miles_illinois-indiana_sea_grant.jpg);
+	background-size: cover;
+	background-color: rgba(255, 0,0,0.5);
+	color: white;
+}
+.header h1 {
+	font-size: 40px;
+}
+
+.navbar {
+	overflow: hidden;
+	background: #2E2F4D;
+}
+.navbar a {
+	float:left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+.navbar a.right {
+	float:right;
+}
+.navbar input[type=text] {
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+}
+.navbar a:hover {
+	background-color: #52699E;
+	color:white;
+}
+
+.row {
+	display: -webkit-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.side {
+	-webkit-flex: 20%;
+	flex: 20%;
+	padding: 20px;
+	background-color: #36456E;
+}
+.main {
+	-webkit-flex: 80%;
+	flex: 80%;
+	background-color:#EBEBE1;
+	padding: 20px;
+}
+
+.fakeimgmain {
+  display: flex;
+  background-color: #aaa;
+  padding: 5px;
+}
+.fakeimgmain img {
+	object-fit: cover;
+	top: 0;
+}
+
+.fakeimgside {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #2E2F4D;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
